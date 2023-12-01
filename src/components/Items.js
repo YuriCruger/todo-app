@@ -63,7 +63,7 @@ export default function Items(props) {
 const filteredTasks = props.filter === 'Active' ? remainingTasks : (props.filter === 'Completed' ? tasks.filter((task) => task.isChecked) : tasks);
 
   return (
-    <div className={`flex flex-col h-full divide-y-[1px] divide-light_grayish_blue ${props.darkMode ? 'divide-very_dark_grayish_blue' : ''}`}>
+    <div className={`flex flex-col min-h-[360px] md:h-[600px] divide-y-[1px] divide-light_grayish_blue ${props.darkMode ? 'divide-very_dark_grayish_blue' : ''}`}>
       {filteredTasks.map((task) => (
         <div key={task.id} className={`p-4 flex items-center ${props.darkMode ? 'bg-very_dark_desaturated_blue' : 'bg-white'}`}>
           <div className='flex items-center'>
